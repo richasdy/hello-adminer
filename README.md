@@ -1,5 +1,5 @@
 # hello-adminer
-docker adminier
+docker adminer
 
 ## ref
 * https://hub.docker.com/_/adminer/
