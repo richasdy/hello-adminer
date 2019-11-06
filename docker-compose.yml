@@ -18,8 +18,8 @@ services:
         POSTGRES_USER: root
         POSTGRES_PASSWORD: toor
         POSTGRES_DB: mydb
-  
-  dbMysql:
+
+    dbMysql:
     image: mysql:8.0.3
     restart: always
     environment:
