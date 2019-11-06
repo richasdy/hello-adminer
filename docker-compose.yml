@@ -8,3 +8,21 @@ services:
     restart: always
     ports:
       - 8080:8080
+
+  dbPostgres:
+    image: postgres:10
+    restart: always
+    ports:
+        - 5432:5432
+    environment:
+        POSTGRES_USER: root
+        POSTGRES_PASSWORD: toor
+        POSTGRES_DB: mydb
+  
+  dbMysql:
+    image: mysql:8.0.3
+    restart: always
+    environment:
+        MYSQL_USER: root
+        MYSQL_ROOT_PASSWORD: toor
+        MYSQL_DATABASE: mydb
