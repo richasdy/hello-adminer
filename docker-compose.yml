@@ -3,14 +3,13 @@ version: '3.1'
 services:
 
   adminer:
-    # image: adminer
-    image: dockette/adminer:full-php5
+    image: adminer:4.7
     restart: always
     ports:
     - 8080:8080
 
   dbPostgres:
-    image: postgres:10
+    image: postgres:12.1-alpine
     restart: always
     ports:
       - 5432:5432
@@ -20,7 +19,7 @@ services:
       POSTGRES_DB: mydb
 
   dbMysql:
-    image: mysql:8.0.3
+    image: mysql:8.0
     restart: always
     ports:
       - 3306:3306
@@ -30,7 +29,7 @@ services:
       MYSQL_DATABASE: mydb
 
   dbMaria:
-    image: mariadb
+    image: mariadb:10.4-bionic
     restart: always
     ports:
       - 3307:3306
@@ -40,7 +39,7 @@ services:
       MYSQL_DATABASE: mydb
 
   dbMongo:
-    image: mongo:3.6.2
+    image: mongo:4.2-bionic
     restart: always
     ports:
       - 27017:27017
